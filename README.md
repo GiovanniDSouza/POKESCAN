@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PokeScan 📱
 
-## Getting Started
+Um aplicativo de scaneamento e gerenciamento de cards Pokémon com banco de dados integrado e API RESTful.
 
-First, run the development server:
+## 📋 Descrição
+
+**PokeScan** é uma plataforma web que permite aos usuários:
+- Escanear e registrar cards Pokémon
+- Consultar informações da Pokédex
+- Gerenciar coleção de Pokémon
+- Visualizar dados detalhados através de uma interface intuitiva
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Next.js, TypeScript
+- **Backend**: Next.js API Routes
+- **Banco de Dados**: SQLite com Drizzle ORM
+- **Estilos**: CSS/Tailwind CSS
+- **Build Tool**: ESLint para qualidade de código
+
+## 🚀 Getting Started
+
+### Pré-requisitos
+- Node.js 16.x ou superior
+- npm ou yarn
+
+### Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/GiovanniDSouza/POKESCAN.git
+cd POKESCAN
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Configure o banco de dados:
+```bash
+npm run db:push
+```
+
+### Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+pokescan/
+├── app/                    # Aplicação Next.js
+│   ├── api/               # Rotas da API
+│   │   ├── card/         # Endpoints de cards
+│   │   ├── pokemon/      # Endpoints de Pokémon
+│   │   ├── pokedex/      # Endpoints da Pokédex
+│   │   └── scan/         # Endpoints de scan
+│   ├── pokedex/          # Página da Pokédex
+│   └── layout.tsx        # Layout principal
+├── src/
+│   └── db/               # Configuração de banco de dados
+│       ├── schema.ts     # Schema do Drizzle
+│       ├── seed.ts       # Dados iniciais
+│       └── import-pokemon.ts
+├── drizzle/              # Migrations
+└── package.json
+```
 
-## Learn More
+## 🔌 API Endpoints
 
-To learn more about Next.js, take a look at the following resources:
+- `GET /api/pokemon` - Lista todos os Pokémon
+- `GET /api/pokedex` - Dados da Pokédex
+- `POST /api/card` - Criar novo card
+- `POST /api/scan` - Registrar novo scan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Scripts Disponíveis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev` - Inicia servidor de desenvolvimento
+- `npm run build` - Build para produção
+- `npm run start` - Executa build de produção
+- `npm run lint` - Executa ESLint
 
-## Deploy on Vercel
+## 🗄️ Banco de Dados
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto usa SQLite com Drizzle ORM. As migrations estão em `/drizzle`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para resetar o banco de dados:
+```bash
+node cleanup-db.js
+```
+
+## 📝 License
+
+Este projeto está sob a licença MIT.
+
+## 👤 Autor
+
+**Giovanni De Souza Ferreira**
+
+---
+
+**Desenvolvido com ❤️ para a comunidade Pokémon**
