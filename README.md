@@ -50,7 +50,15 @@ Para iniciar o servidor de desenvolvimento:
 npm run dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado.
+Abra [http://localhost:3000]([http://localhost:3000](http://localhost:3001)) no navegador para ver o resultado.
+
+<img width="769" height="769" alt="image" src="https://github.com/user-attachments/assets/c6e6b6b7-6814-43a1-a50c-28bdf0033230" />
+
+<img width="669" height="751" alt="image" src="https://github.com/user-attachments/assets/49dcbbcf-ac87-484a-81df-6aa75b3f5c7c" />
+
+<img width="501" height="763" alt="image" src="https://github.com/user-attachments/assets/2ded6664-91b1-42db-b4bb-961e3be0912c" />
+
+<img width="703" height="734" alt="image" src="https://github.com/user-attachments/assets/0c96730d-0d52-496d-8d42-ee1922544f8d" />
 
 ## 📂 Estrutura do Projeto
 
